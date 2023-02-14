@@ -1,3 +1,8 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,33 +10,48 @@ body {
     overflow: auto;
     width: 100vw;
     height: 100vh;
-    background: url('../11.jpg') left bottom no-repeat;
     box-sizing: border-box;
-    background-size: 100%;
 }
-html {
-    width: 100vw;
-    height: 100vh;
-    background: #feafe8;
+
+@keyframes am1 {
+	0% {
+		bottom: -600px;
+	}
+	100% {
+		bottom: 0px;
+	}
 }
+
 #mainDiv {
     width: 100%;
     height: 100%;
 }
 
 #content {
-    width: 100vw;
+    min-width: 670px;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+	position: relative;
+}
+
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 #loveHeart {
-    float: left;
+    /* float: left; */
+    position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
     width: 670px;
     height: 620px;
-    position: relative;
     padding-top: 20px;
+	z-index: 88;
 }
 
 #garden {
@@ -50,7 +70,8 @@ html {
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #666
+    /* color: #666 */
+	color: cyan;
 }
 
 #messages {
@@ -81,13 +102,16 @@ html {
 }
 
 #code {
-    float: left;
     width: 440px;
     margin-top: 60px !important;
-    height: 400px;
-    color: #333;
+    /* color: #333; */
+	/* color: aqua; */
+	color: cyan;
     font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-    font-size: 12px
+    font-size: 12px;
+	position: relative;
+	z-index: 88;
+	display: none;
 }
 
 #code .string {
