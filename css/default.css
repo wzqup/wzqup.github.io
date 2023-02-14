@@ -28,7 +28,8 @@ body {
 }
 
 #content {
-    min-width: 670px;
+    /* min-width: 670px; */
+	width: 100vw;
     height: 100vh;
 	position: relative;
 }
